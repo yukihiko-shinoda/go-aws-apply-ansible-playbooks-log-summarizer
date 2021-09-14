@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  go-aws-apply-ansible-playbooks-log-summarizer:
+    build: .
+    image: futureys/go-aws-apply-ansible-playbooks-log-summarizer:development
+    volumes:
+      - ~/.aws:/root/.aws
