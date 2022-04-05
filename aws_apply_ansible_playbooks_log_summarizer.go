@@ -27,12 +27,12 @@ type structSucceed struct {
 	playRecap  *ansiblelogparser.StructPlayRecap
 }
 
-func ViewLog(ssmClient command.ListCommandsListCommandInvocationsAPI, ec2Client instance.DescribeInstancesAPI, cloudwatchlogsClient logs.GetLogEventsAPI) error {
-	latestCommandInvocations, err := command.GetLatestApplyAnsiblePlaybooksInvocations(ssmClient)
+func ViewLog(ssmClient command.ListCommandsListCommandInvocationsAPI, ec2Client instance.DescribeInstancesAPI, cloudwatchlogsClient logs.GetLogEventsAPI, commandId *string) error {
+	commandInvocations, err := command.GetApplyAnsiblePlaybooksInvocations(ssmClient, commandId)
 	if err != nil {
 		return err
 	}
-	succeed, failed := checkCloudWatchLogs(ec2Client, cloudwatchlogsClient, latestCommandInvocations)
+	succeed, failed := checkCloudWatchLogs(ec2Client, cloudwatchlogsClient, commandInvocations)
 	report(failed, succeed)
 	return nil
 }

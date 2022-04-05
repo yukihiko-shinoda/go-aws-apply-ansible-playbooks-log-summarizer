@@ -729,6 +729,8 @@ github.com/yukihiko-shinoda/go-ansible-log-parser-for-cloudwatch v0.0.0-20210909
 github.com/yukihiko-shinoda/go-ansible-log-parser-for-cloudwatch v0.0.0-20210909181638-b1c18aaef0de/go.mod h1:ZBBWH+0xg0rapVQaHyQqJp5x/u6OxStbn/HjpvyBJ74=
 github.com/yukihiko-shinoda/go-aws-api-util v0.0.0-20210911115711-829aa9953401 h1:76IjCvhB1t08iwpXbDz29xuHjOjcVo0js1fcFURZjZY=
 github.com/yukihiko-shinoda/go-aws-api-util v0.0.0-20210911115711-829aa9953401/go.mod h1:HAZTYFRFEVp97hh8ejgc21MsCMljnZBvh2YO5j/8zKk=
+github.com/yukihiko-shinoda/go-aws-api-util v0.0.0-20220405094430-1ae0b0c52eeb h1:Vh6oiVLw0ni9wEfTSIyNOlWtVaYKqcNayzg/0D0tt6I=
+github.com/yukihiko-shinoda/go-aws-api-util v0.0.0-20220405094430-1ae0b0c52eeb/go.mod h1:HAZTYFRFEVp97hh8ejgc21MsCMljnZBvh2YO5j/8zKk=
 go.etcd.io/bbolt v1.3.2/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 go.etcd.io/bbolt v1.3.3/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 go.etcd.io/bbolt v1.3.4/go.mod h1:G5EMThwa9y8QZGBClrRx5EY+Yw9kAhnjy3bSjsnlVTQ=
