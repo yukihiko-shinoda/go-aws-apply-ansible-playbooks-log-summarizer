@@ -44,12 +44,8 @@ func checkCloudWatchLogs(ec2Client instance.DescribeInstancesAPI, cloudwatchlogs
 		logStreamName := command.BuildLogStreamNameRunShellScriptStdout(commandInvocation)
 		tagName, err := instance.GetNameFromTag(ec2Client, commandInvocation)
 		if err != nil {
-			failed = append(failed, structFailed{
-				*commandInvocation.InstanceId,
-				"",
-				err.Error(),
-			})
-			continue
+			errorString := err.Error()
+			tagName = &errorString
 		}
 		events, err := logs.GetAllLogs(cloudwatchlogsClient, "/aws/systems-manager/run-command", logStreamName)
 		if err != nil {
